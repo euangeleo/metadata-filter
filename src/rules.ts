@@ -65,6 +65,8 @@ export const YOUTUBE_TRACK_FILTER_RULES: FilterRule[] = [
 	{ source: /^(|.*\s)'(.{5,})'(\s.*|)$/, target: '$2' },
 	// (*01/01/1999*)
 	{ source: /\(.*[0-9]{1,2}\/[0-9]{1,2}\/[0-9]{2,4}.*\)/i, target: '' },
+	// 01. or 01)
+	{ source: /[0-9]{1,2}[).]{1,2}/, target: ''},
 	// Sub Español
 	{ source: /sub\s*español/i, target: '' },
 	// (Letra/Lyrics)
